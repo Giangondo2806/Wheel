@@ -61,7 +61,7 @@ export class OndoWheel {
     segments = [];
     animation = {} as any;
     pins;
-    pointerGuide ={} as any;
+    pointerGuide = {} as any;
     private options: OndoWheelOption;
     constructor(settingOption: OndoWheelOption, drawWheel) {
         this.options = { ...WinWheelDefautOption, ...settingOption }
@@ -131,7 +131,7 @@ export class OndoWheel {
         // Call function to update the segment sizes setting the starting and ending angles.
         this.updateSegmentSizes();
 
-       
+
         // this.drawSegments();
 
 
@@ -339,7 +339,7 @@ export class OndoWheel {
             }
 
             // If pointer guide is display property is set to true then call function to draw the pointer guide.
-            if (this.pointerGuide.display === true && this.pointerGuide.display!==undefined ) {
+            if (this.pointerGuide.display === true && this.pointerGuide.display !== undefined) {
                 this.drawPointerGuide();
             }
         }
@@ -1997,7 +1997,7 @@ let winwheelToDrawDuringAnimation = null;  // This global is set by the winwheel
 // tslint:disable-next-line: no-unused-expression
 function winwheelStopAnimation(canCallback) {
 
-    if (this.canCallback !== false) {
+    if (canCallback !== false) {
         if (winwheelToDrawDuringAnimation.animation.callbackFinished != null) {
             eval(winwheelToDrawDuringAnimation.animation.callbackFinished);
         }
