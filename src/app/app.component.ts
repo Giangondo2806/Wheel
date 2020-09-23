@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
       }
     }
     this.theWheel = new OndoWheel(option, null);
-    this.theWheel.startAnimation();
+    // this.theWheel.startAnimation();
 
   }
   // Vars used by the code in this page to do power controls.
@@ -80,7 +80,7 @@ export class AppComponent implements OnInit {
       this.wheelPower = powerLevel;
 
       // Light up the spin button by changing it's source image and adding a clickable class to it.
-      (document.getElementById('spin_button') as any).src = "spin_on.png";
+      (document.getElementById('spin_button') as any).src = "assets/spin_on.png";
       document.getElementById('spin_button').className = "clickable";
     }
   }
