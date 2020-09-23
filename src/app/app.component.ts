@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
       }
     }
     this.theWheel = new OndoWheel(option, null);
+    this.theWheel.drawSegmentImages();
     // this.theWheel.startAnimation();
 
   }

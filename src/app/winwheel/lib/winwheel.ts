@@ -158,7 +158,7 @@ export class OndoWheel {
 
         // ------------------------------------------
         // On that note, if the drawMode is image change some defaults provided a value has not been specified.
-        if ((this.drawMode == 'image') || (this.drawMode == 'segmentImage')) {
+        if ((this.drawMode === 'image') || (this.drawMode == 'segmentImage')) {
             // Remove grey fillStyle.
             if (typeof (this.options.fillStyle) === 'undefined') {
                 this.fillStyle = null;
@@ -200,10 +200,10 @@ export class OndoWheel {
         }
 
         // Finally if drawWheel is true then call function to render the wheel, segment text, overlay etc.
-        if (drawWheel == true) {
+        if (drawWheel === true) {
             this.draw(this.clearTheCanvas);
         }
-        else if (this.drawMode == 'segmentImage') {
+        else if (this.drawMode === 'segmentImage') {
             // If segment image then loop though all the segments and load the images for them setting a callback
             // which will call the draw function of the wheel once all the images have been loaded.
             winwheelToDrawDuringAnimation = this;
@@ -219,7 +219,6 @@ export class OndoWheel {
             }
         }
         this.draw(undefined);
-
     }
 
     updateSegmentSizes() {
