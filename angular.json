@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "WinWheel"
+    }
+  },
+  "defaultProject": "WinWheel",
+  "cli": {
+    "analytics": false
+  }
 }
